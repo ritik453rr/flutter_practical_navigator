@@ -21,14 +21,25 @@ class _ScreenOneState extends State<ScreenOne> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Push screen two 
+            //Push screen two
             Center(
               child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const ScreenTwo()));
-                  },
-                  child: const Text('Push screen 2')),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ScreenTwo(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                ),
+                child: const Text(
+                  'Push screen 2',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             )
           ],
         ),
